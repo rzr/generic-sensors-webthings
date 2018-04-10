@@ -1,0 +1,40 @@
+{
+  "name": "generic-sensors-adapter",
+  "version": "0.0.1",
+  "description": "Generic Sensors for Mozilla IoT Gateway",
+  "main": "index.js",
+  "keywords": [
+    "mozilla",
+    "iot",
+    "adapter",
+    "i2c",
+    "sensors"
+  ],
+  "license": "MPL-2.0",
+  "homepage": "https://github.com/rzr/mozilla-iot-generic-sensors-adapter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rzr/mozilla-iot-generic-sensors-adapter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rzr/mozilla-iot-generic-sensors-adapter/issues"
+  },
+  "files": [
+    "LICENSE",
+    "SHA256SUMS",
+    "generic-sensors-adapter.js",
+    "index.js",
+    "node_modules"
+  ],
+  "dependencies": {
+    "generic-sensors-lite": "git+https://github.com/rzr/generic-sensors-lite.git"
+  },
+  "moziot": {
+    "api": {
+      "min": 2,
+      "max": 2
+    },
+    "plugin": true,
+    "exec": "{nodeLoader} {path}"
+  }
+}

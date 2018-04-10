@@ -1,2 +1,7 @@
 *~
+*.swp
+*.tgz
 *.tmp
+*~
+SHA256SUMS
+node_modules/
