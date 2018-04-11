@@ -29,6 +29,9 @@
   "dependencies": {
     "generic-sensors-lite": "git+https://github.com/rzr/generic-sensors-lite.git"
   },
+  "bundledDependencies": [
+    "generic-sensors-lite"
+  ],
   "moziot": {
     "api": {
       "min": 2,
