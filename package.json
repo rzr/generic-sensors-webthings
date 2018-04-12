@@ -27,7 +27,7 @@
     "node_modules"
   ],
   "dependencies": {
-    "generic-sensors-lite": "git+https://github.com/rzr/generic-sensors-lite.git"
+    "generic-sensors-lite": "0.0.1"
   },
   "bundledDependencies": [
     "generic-sensors-lite"
