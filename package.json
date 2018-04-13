@@ -1,6 +1,6 @@
 {
   "name": "generic-sensors-adapter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generic Sensors for Mozilla IoT Gateway",
   "main": "index.js",
   "keywords": [
@@ -38,6 +38,76 @@
       "max": 2
     },
     "plugin": true,
-    "exec": "{nodeLoader} {path}"
+    "exec": "{nodeLoader} {path}",
+    "config": {
+      "generic-sensors": [
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "generic-sensors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "type",
+              "sensorType",
+              "name",
+              "properties"
+            ],
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "sensorType": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "properties": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "name",
+                    "metadata"
+                  ],
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "metadata": {
+                      "type": "object",
+                      "required": [
+                        "type"
+                      ],
+                      "properties": {
+                        "type": {
+                          "type": "string"
+                        },
+                        "unit": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        },
+                        "minimum": {
+                          "type": "integer"
+                        },
+                        "maximum": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -13,27 +13,16 @@
 
 var GenericSensors = require('generic-sensors-lite');
 
-let Adapter, Device, Property;
-try {
-  Adapter = require('../adapter');
-  Device = require('../device');
-  Property = require('../property');
-} catch (e) {
-  if (e.code !== 'MODULE_NOT_FOUND') {
-    throw e;
-  }
-
-  const gwa = require('gateway-addon');
-  Adapter = gwa.Adapter;
-  Device = gwa.Device;
-  Property = gwa.Property;
-}
+const {
+  Adapter,
+  Device,
+  Property,
+} = require('gateway-addon');
 
 
 function on() {
   return {
     name: 'on',
-    value: false,
     metadata: {
       type: 'boolean'
     }
@@ -43,7 +32,6 @@ function on() {
 function level() {
   return {
     name: 'level',
-    value: 0,
     metadata: {
       type: 'number',
     }
@@ -142,10 +130,11 @@ class GenericSensorsDevice extends Device {
       this.sensors.ambientLight = new GenericSensors.AmbientLight({ frequency: 2 });
     }
 
-    this.properties.set('level',
-                        new GenericSensorsProperty(this, 'level', {type: 'number'}));
-    this.properties.set('on',
-                        new GenericSensorsProperty(this, 'on', {type: 'boolean'}));
+    for (const prop of config.properties) {
+      this.properties.set(
+        prop.name, new GenericSensorsProperty(this, prop.name, prop.metadata));
+    }
+
     this.adapter.handleDeviceAdded(this);
   }
 }
@@ -154,12 +143,17 @@ class GenericSensorsAdapter extends Adapter {
   constructor(addonManager, manifest) {
     super(addonManager, manifest.name, manifest.name);
     addonManager.addAdapter(this);
-    let devices = GENERICSENSORS_THINGS;
-    if (manifest.moziot.config.hasOwnProperty('generic-sensors')) {
-      devices = Object.assign(devices, manifest.moziot.config.genericsensors);
+
+    let devices;
+    if (manifest.moziot.config.hasOwnProperty('generic-sensors') &&
+        manifest.moziot.config['generic-sensors'].length > 0) {
+      devices = manifest.moziot.config['generic-sensors'];
+    } else {
+      devices = GENERICSENSORS_THINGS;
     }
+
     for (const device in devices) {
-      new GenericSensorsDevice(this, device, devices[device] );
+      new GenericSensorsDevice(this, device, devices[device]);
     }
   }
 }
