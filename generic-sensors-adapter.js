@@ -40,7 +40,7 @@ function level() {
 
 
 const ambientLightSensor = {
-  type: "multilevelSensor",
+  type: "multiLevelSensor",
   sensorType: 'ambientLightSensor',
   name: 'Ambient Light Sensor',
   properties: [
@@ -50,7 +50,7 @@ const ambientLightSensor = {
 };
 
 const temperatureSensor = {
-  type: "multilevelSensor",
+  type: "multiLevelSensor",
   sensorType: 'temperatureSensor',
   name: 'Temperature Sensor',
   properties: [
