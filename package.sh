@@ -1,4 +1,5 @@
 #!/bin/bash -e
+# SPDX-License-Identifier: MPL-2.0
 yarn --version > /dev/null 2>&1 \
 || { echo "error: yarn not found (try: npm install -g yarn)" ; exit 1; }
 

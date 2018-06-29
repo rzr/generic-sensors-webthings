@@ -1,4 +1,5 @@
 // -*- mode: js; js-indent-level:2;  -*-
+// SPDX-License-Identifier: MPL-2.0
 /**
  * generic-sensors-adapter.js - Generic sensors adapter.
  *
