@@ -29,7 +29,7 @@
     "node_modules"
   ],
   "dependencies": {
-    "generic-sensors-lite": "0.0.1"
+    "generic-sensors-lite": "0.0.2"
   },
   "bundledDependencies": [
     "generic-sensors-lite"
