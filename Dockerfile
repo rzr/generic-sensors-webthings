@@ -6,8 +6,10 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/ .
 #}
 
-FROM debian:latest
+FROM resin/rpi-raspbian:stretch
 MAINTAINER Philippe Coval (p.coval@samsung.com)
+
+RUN [ "cross-build-start" ]
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LC_ALL en_US.UTF-8
@@ -49,6 +51,7 @@ WORKDIR /root/.mozilla-iot/addons/${project}
 RUN echo "#log: ${project}: Preparing sources" \
   && set -x \
   && which npm || . ~/.bashrc \
+  && npm config set unsafe-perm true \
   && which yarn || npm install -g yarn \
   && sync
 
@@ -65,3 +68,5 @@ RUN echo "#log: ${project}: Installing sources" \
   && install -d /usr/local/src/${project}/ \
   && install generic-sensors-adapter-*.tgz /usr/local/src/${project}/ \
   && sync
+
+RUN [ "cross-build-end" ]
