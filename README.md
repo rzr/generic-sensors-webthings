@@ -10,6 +10,7 @@
 ## DEMO: ##
 
 [![mozilla-iot-gateway-sensors-20180406rzr.webm](https://i.vimeocdn.com/video/693119286.jpg)](https://player.vimeo.com/video/263556462#mozilla-iot-gateway-sensors-20180406rzr "Video Demo")
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frzr%2Fmozilla-iot-generic-sensors-adapter.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Frzr%2Fmozilla-iot-generic-sensors-adapter?ref=badge_shield)
 
 ![mozilla-iot-gateway-sensors-20180406rzr.png](https://i1.wp.com/s-opensource.org/wp-content/uploads/2018/04/mozilla-iot-gateway-sensors-20180406rzr.png "Rules")
 
@@ -25,3 +26,7 @@
 * https://www.npmjs.com/~rzr
 * https://s-opensource.org/author/philcovalsamsungcom/
 * irc://irc.mozilla.org/#iot
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frzr%2Fmozilla-iot-generic-sensors-adapter.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Frzr%2Fmozilla-iot-generic-sensors-adapter?ref=badge_large)
