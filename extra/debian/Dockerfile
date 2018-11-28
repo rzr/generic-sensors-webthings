@@ -6,7 +6,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/ .
 #}
 
-FROM debian:stretch
+FROM i386/debian:stretch
 MAINTAINER Philippe Coval (p.coval@samsung.com)
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -39,7 +39,7 @@ ENV install_url https://raw.githubusercontent.com/mozilla-iot/gateway/master/ins
 RUN echo "#log: ${project}: Setup system" \
   && set -x \
   && curl -o mozilla-iot-gateway-install.sh ${install_url} \
-  && bash -x -e mozilla-iot-gateway-install.sh \
+  && linux32 bash -x -e mozilla-iot-gateway-install.sh \
   && sync
 
 ADD . /root/.mozilla-iot/addons/generic-sensors-adapter
