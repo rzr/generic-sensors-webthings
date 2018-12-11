@@ -5,6 +5,9 @@
   "description": "Generic Sensors for Mozilla IoT Gateway",
   "author": "Philippe Coval",
   "main": "index.js",
+  "scripts": {
+    "test": "eslint ."
+  },
   "keywords": [
     "mozilla",
     "iot",
@@ -29,7 +32,9 @@
     "node_modules"
   ],
   "dependencies": {
-    "generic-sensors-lite": "0.0.2"
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.14.1",
+    "generic-sensors-lite": "0.0.6"
   },
   "bundledDependencies": [
     "generic-sensors-lite"
@@ -42,8 +47,7 @@
     "plugin": true,
     "exec": "{nodeLoader} {path}",
     "config": {
-      "generic-sensors": [
-      ]
+      "generic-sensors": []
     },
     "schema": {
       "type": "object",
