@@ -36,9 +36,7 @@ RUN echo "#log: ${project}: Setup system" \
   && apt-get clean \
   && sync
 
-#TODO:
-#ENV install_url https://raw.githubusercontent.com/mozilla-iot/gateway/master/install.sh
-ENV install_url https://raw.githubusercontent.com/tizenteam/gateway/sandbox/rzr/review/fix/master/install.sh
+ENV install_url https://raw.githubusercontent.com/mozilla-iot/gateway/master/install.sh
 
 RUN echo "#log: ${project}: Setup system" \
   && set -x \
