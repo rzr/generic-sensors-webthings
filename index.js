@@ -9,7 +9,7 @@
 
 'use strict';
 
-var fs = require('fs');
+const fs = require('fs');
 
 function maybeLoadGenericSensorsAdapter(addonManager, manifest, errorCallback) {
   try {
@@ -19,7 +19,7 @@ function maybeLoadGenericSensorsAdapter(addonManager, manifest, errorCallback) {
     return;
   }
 
-  var loadGenericSensorsAdapter = require('./generic-sensors-adapter');
+  const loadGenericSensorsAdapter = require('./generic-sensors-adapter');
   return loadGenericSensorsAdapter(addonManager, manifest, errorCallback);
 }
 
