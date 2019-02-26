@@ -26,6 +26,7 @@
 * https://www.npmjs.com/~rzr
 * https://s-opensource.org/author/philcovalsamsungcom/
 * irc://irc.mozilla.org/#iot
+* https://github.com/mozilla-iot/gateway/issues/1567
 
 
 ## License
