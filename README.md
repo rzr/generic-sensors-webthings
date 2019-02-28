@@ -29,7 +29,7 @@ Check following wiki page for more details:
 
 [![mozilla-iot-gateway-sensors-20180406rzr.webm](https://i.vimeocdn.com/video/693119286.jpg)](https://player.vimeo.com/video/263556462#mozilla-iot-gateway-sensors-20180406rzr "Video Demo")
 
-[![mozilla-iot-gateway-sensors-20180406rzr.png](https://i1.wp.com/s-opensource.org/wp-content/uploads/2018/04/mozilla-iot-gateway-sensors-20180406rzr.png)](https://www.slideshare.net/rzrfreefr/webthingiotjs20181022rzr-120959360/12#webthing-iotjs-20181027rzr "Rules")
+[![mozilla-iot-gateway-sensors-20180406rzr.png](https://i1.wp.com/s-opensource.org/wp-content/uploads/2018/04/mozilla-iot-gateway-sensors-20180406rzr.png)](https://www.slideshare.net/rzrfreefr/webthingiotjs20181022rzr-120959360/12# "Rules")
 
 
 ## RESOURCES: ##
