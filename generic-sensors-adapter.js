@@ -115,7 +115,7 @@ class GenericSensorsProperty extends Property {
         this.setCachedValue(this.device.sensors.temperature.celsius);
       } else if (this.device.sensorType == 'ambientLightSensor') {
         this.setCachedValue(this.device.sensors.ambientLight.illuminance);
-      }
+     }
     }
     this.device.notifyPropertyChanged(this);
   }
@@ -132,9 +132,9 @@ class GenericSensorsDevice extends Device {
 
     this.sensors = {};
     if (config.sensorType === 'temperatureSensor') {
-      this.sensors.temperature = new GenericSensors.Temperature({ frequency: 2 });
+      this.sensors.temperature = new GenericSensors.Temperature();
     } else if (config.sensorType === 'ambientLightSensor') {
-      this.sensors.ambientLight = new GenericSensors.AmbientLight({ frequency: 2 });
+      this.sensors.ambientLight = new GenericSensors.AmbientLight();
     }
 
     for (const prop of config.properties) {
