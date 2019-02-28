@@ -24,18 +24,17 @@ const {
 function on() {
   return {
     name: 'on',
-    metadata: {
-      type: 'boolean'
-    }
+    type: 'boolean',
+    value: false,
   };
 }
 
 function level() {
   return {
     name: 'level',
-    metadata: {
-      type: 'number',
-    }
+    readOnly: 'true',
+    type: 'number',
+    value: 0,
   };
 }
 
@@ -133,7 +132,8 @@ class GenericSensorsDevice extends Device {
 
     for (const prop of config.properties) {
       this.properties.set(
-        prop.name, new GenericSensorsProperty(this, prop.name, prop.metadata));
+        prop.name,
+        new GenericSensorsProperty(this, prop.name, prop));
     }
 
     this.adapter.handleDeviceAdded(this);
