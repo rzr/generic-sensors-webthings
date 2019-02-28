@@ -69,7 +69,8 @@ class GenericSensorsProperty extends Property {
   constructor(device, name, propertyDescr) {
     super(device, name, propertyDescr);
     const self = this;
-    if (name === "level") {
+    this.setCachedValue(propertyDescr.value);
+    if (name !== 'on') {
       const sensor = this.getSensor();
       if (sensor) {
         sensor.onreading = function() {
@@ -91,24 +92,30 @@ class GenericSensorsProperty extends Property {
   }
 
   setValue(value) {
-    if (this.value === value) return;
-
     return new Promise((resolve, reject) => {
+      if (this.name === 'on') {
       if (value) {
         this.getSensor().start();
       } else {
         this.getSensor().stop();
       }
-      this.setCachedValue(value);
+      }
+      super.setValue(value).then((updatedValue) => {
+        resolve(updatedValue);
       this.device.notifyPropertyChanged(this);
+      }).catch((err) => {
+        reject(err);
+      });
     });
   }
 
   update() {
-    if (this.device.sensorType == "temperatureSensor") {
-      this.setCachedValue(this.device.sensors.temperature.celsius);
-    } else if (this.device.sensorType == "ambientLightSensor") {
-      this.setCachedValue(this.device.sensors.ambientLight.illuminance);
+    if (this.name !== 'on') {
+      if (this.device.sensorType == 'temperatureSensor') {
+        this.setCachedValue(this.device.sensors.temperature.celsius);
+      } else if (this.device.sensorType == 'ambientLightSensor') {
+        this.setCachedValue(this.device.sensors.ambientLight.illuminance);
+      }
     }
     this.device.notifyPropertyChanged(this);
   }
