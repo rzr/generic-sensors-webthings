@@ -12,7 +12,7 @@
 
 'use strict';
 
-var GenericSensors = require('generic-sensors-lite');
+const GenericSensors = require('generic-sensors-lite');
 
 const {
   Adapter,
@@ -41,23 +41,23 @@ function level() {
 
 
 const ambientLightSensor = {
-  type: "multiLevelSensor",
+  type: 'multiLevelSensor',
   sensorType: 'ambientLightSensor',
   name: 'Ambient Light Sensor',
   properties: [
     level(),
-    on()
-  ]
+    on(),
+  ],
 };
 
 const temperatureSensor = {
-  type: "multiLevelSensor",
+  type: 'multiLevelSensor',
   sensorType: 'temperatureSensor',
   name: 'Temperature Sensor',
   properties: [
     level(),
-    on()
-  ]
+    on(),
+  ],
 };
 
 const GENERICSENSORS_THINGS = [
@@ -69,9 +69,9 @@ const GENERICSENSORS_THINGS = [
 class GenericSensorsProperty extends Property {
   constructor(device, name, propertyDescr) {
     super(device, name, propertyDescr);
-    let self = this;
+    const self = this;
     if (name === "level") {
-      var sensor = this.getSensor();
+      const sensor = this.getSensor();
       if (sensor) {
         sensor.onreading = function() {
           self.update();
@@ -82,10 +82,10 @@ class GenericSensorsProperty extends Property {
   }
 
   getSensor() {
-    var sensor = null;
-    if (this.device.sensorType === "temperatureSensor") {
+    let sensor = null;
+    if (this.device.sensorType === 'temperatureSensor') {
       sensor = this.device.sensors.temperature;
-    } else  if (this.device.sensorType === "ambientLightSensor") {
+    } else if (this.device.sensorType === 'ambientLightSensor') {
       sensor = this.device.sensors.ambientLight;
     }
     return sensor;
@@ -117,17 +117,17 @@ class GenericSensorsProperty extends Property {
 
 class GenericSensorsDevice extends Device {
   constructor(adapter, id, config) {
-    super(adapter, id)
+    super(adapter, id);
     this.config = config;
     this.type = config.type;
     this.name = config.name;
-    this.description = "Generic Sensor";
+    this.description = 'Generic Sensor';
     this.sensorType = config.sensorType;
 
     this.sensors = {};
-    if (config.sensorType === "temperatureSensor") {
+    if (config.sensorType === 'temperatureSensor') {
       this.sensors.temperature = new GenericSensors.Temperature({ frequency: 2 });
-    } else if (config.sensorType === "ambientLightSensor") {
+    } else if (config.sensorType === 'ambientLightSensor') {
       this.sensors.ambientLight = new GenericSensors.AmbientLight({ frequency: 2 });
     }
 
