@@ -38,6 +38,15 @@ function level() {
   };
 }
 
+function color() {
+  return {
+    name: 'color',
+    readOnly: 'true',
+    type: 'string',
+    value: '#000000',
+  };
+}
+
 
 const ambientLightSensor = {
   type: 'multiLevelSensor',
@@ -45,6 +54,16 @@ const ambientLightSensor = {
   name: 'Ambient Light Sensor',
   properties: [
     level(),
+    on(),
+  ],
+};
+
+const colorSensor = {
+  type: 'colorControl',
+  sensorType: 'colorSensor',
+  name: 'Color Sensor',
+  properties: [
+    color(),
     on(),
   ],
 };
@@ -61,7 +80,8 @@ const temperatureSensor = {
 
 const GENERICSENSORS_THINGS = [
   ambientLightSensor,
-  temperatureSensor
+  colorSensor,
+  temperatureSensor,
 ];
 
 
@@ -87,6 +107,8 @@ class GenericSensorsProperty extends Property {
       sensor = this.device.sensors.temperature;
     } else if (this.device.sensorType === 'ambientLightSensor') {
       sensor = this.device.sensors.ambientLight;
+    } else if (this.device.sensorType === 'colorSensor') {
+      sensor = this.device.sensors.color;
     }
     return sensor;
   }
@@ -94,15 +116,15 @@ class GenericSensorsProperty extends Property {
   setValue(value) {
     return new Promise((resolve, reject) => {
       if (this.name === 'on') {
-      if (value) {
-        this.getSensor().start();
-      } else {
-        this.getSensor().stop();
-      }
+        if (value) {
+          this.getSensor().start();
+        } else {
+          this.getSensor().stop();
+        }
       }
       super.setValue(value).then((updatedValue) => {
         resolve(updatedValue);
-      this.device.notifyPropertyChanged(this);
+        this.device.notifyPropertyChanged(this);
       }).catch((err) => {
         reject(err);
       });
@@ -115,7 +137,9 @@ class GenericSensorsProperty extends Property {
         this.setCachedValue(this.device.sensors.temperature.celsius);
       } else if (this.device.sensorType == 'ambientLightSensor') {
         this.setCachedValue(this.device.sensors.ambientLight.illuminance);
-     }
+      } else if (this.device.sensorType == 'colorSensor') {
+        this.setCachedValue(this.device.sensors.color.color);
+      }
     }
     this.device.notifyPropertyChanged(this);
   }
@@ -135,6 +159,8 @@ class GenericSensorsDevice extends Device {
       this.sensors.temperature = new GenericSensors.Temperature();
     } else if (config.sensorType === 'ambientLightSensor') {
       this.sensors.ambientLight = new GenericSensors.AmbientLight();
+    } else if (config.sensorType === 'colorSensor') {
+      this.sensors.color = new GenericSensors.Color();
     }
 
     for (const prop of config.properties) {
