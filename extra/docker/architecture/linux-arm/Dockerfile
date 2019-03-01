@@ -26,7 +26,7 @@ RUN echo "#log: Configuring locales" \
   && dpkg-reconfigure locales \
   && sync
 
-ENV project mozilla-generic-sensors-adapter
+ENV project mozilla-iot-generic-sensors-adapter
 
 RUN echo "#log: ${project}: Setup system" \
   && set -x \
@@ -65,8 +65,8 @@ RUN echo "#log: ${project}: Building sources" \
 WORKDIR /root/.mozilla-iot/addons/generic-sensors-adapter
 RUN echo "#log: ${project}: Installing sources" \
   && set -x \
-  && install -d /usr/local/src/${project}/ \
-  && install generic-sensors-adapter-*.tgz /usr/local/src/${project}/ \
+  && install -d /usr/local/src/${project}/dist \
+  && install generic-sensors-adapter-*.tgz /usr/local/src/${project}/dist/ \
   && sync
 
 RUN [ "cross-build-end" ]
