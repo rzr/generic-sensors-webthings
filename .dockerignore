@@ -1,1 +1,12 @@
+#.dockerignore
 Dockerfile
+#.gitignore
+*~
+*.swp
+*.tgz
+*.tmp
+*~
+SHA256SUMS
+node_modules/
+yarn-error.log
+**/tmp/
