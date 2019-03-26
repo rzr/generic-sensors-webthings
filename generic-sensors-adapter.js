@@ -148,7 +148,7 @@ class GenericSensorsProperty extends Property {
 class GenericSensorsDevice extends Device {
   constructor(adapter, id, config) {
     super(adapter, id);
-    
+
     this.type = config.type;
     this.name = config.name;
     this.sensorType = config.sensorType;
@@ -185,7 +185,7 @@ class GenericSensorsAdapter extends Adapter {
       devices = GENERICSENSORS_THINGS;
     }
     for (let i = 0; i < devices.length; i++) {
-      const id = `generic-sensors-${i}`
+      const id = `generic-sensors-${i}`;
       new GenericSensorsDevice(this, id, devices[i]);
     }
   }
@@ -194,7 +194,7 @@ class GenericSensorsAdapter extends Adapter {
 function loadGenericSensorsAdapter(addonManager, manifest, _errorCallback) {
   try {
     new GenericSensorsAdapter(addonManager, manifest);
-  } catch(err) {
+  } catch (err) {
     _errorCallback(err);
   }
 }
