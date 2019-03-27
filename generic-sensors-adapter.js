@@ -20,7 +20,6 @@ const {
   Property,
 } = require('gateway-addon');
 
-
 function on() {
   return {
     name: 'on',
@@ -152,14 +151,21 @@ class GenericSensorsDevice extends Device {
     this.type = config.type;
     this.name = config.name;
     this.sensorType = config.sensorType;
+    this.sensorController = config.sensorController || 'simulator';
 
     this.sensors = {};
     if (config.sensorType === 'temperatureSensor') {
-      this.sensors.temperature = new GenericSensors.Temperature();
+      this.sensorController = config.sensorController || 'bmp085';
+      this.sensors.temperature =
+        new GenericSensors.Temperature({controller: this.sensorController});
     } else if (config.sensorType === 'ambientLightSensor') {
-      this.sensors.ambientLight = new GenericSensors.AmbientLight();
+      this.sensorController = config.sensorController || 'bh1750';
+      this.sensors.ambientLight =
+        new GenericSensors.AmbientLight({controller: this.sensorController});
     } else if (config.sensorType === 'colorSensor') {
-      this.sensors.color = new GenericSensors.Color();
+      this.sensorController = config.sensorController || 'tcs34725';
+      this.sensors.color =
+        new GenericSensors.Color({controller: this.sensorController});
     }
 
     for (const prop of config.properties) {
@@ -185,8 +191,7 @@ class GenericSensorsAdapter extends Adapter {
       devices = GENERICSENSORS_THINGS;
     }
     for (let i = 0; i < devices.length; i++) {
-      const id = `generic-sensors-${i}`;
-      new GenericSensorsDevice(this, id, devices[i]);
+      new GenericSensorsDevice(this, i, devices[i]);
     }
   }
 }
