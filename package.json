@@ -1,7 +1,7 @@
 {
   "name": "generic-sensors-adapter",
   "display_name": "Generic Sensors",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Generic Sensors for Mozilla IoT Gateway",
   "author": "Philippe Coval",
   "main": "index.js",
