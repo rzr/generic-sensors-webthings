@@ -61,14 +61,28 @@
             "required": [
               "type",
               "sensorType",
+              "sensorController",
               "name",
               "properties"
             ],
             "properties": {
               "type": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "colorSensor",
+                  "multiLevelSensor",
+                  "temperatureSensor"
+                ]
               },
               "sensorType": {
+                "type": "string",
+                "enum": [
+                  "ambientLightSensor",
+                  "colorSensor",
+                  "temperatureSensor"
+                ]
+              },
+              "sensorController": {
                 "type": "string"
               },
               "name": {
