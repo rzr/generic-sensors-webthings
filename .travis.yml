@@ -10,3 +10,11 @@ services:
 
 script:
   - docker build .
+
+deploy:
+  provider: releases
+  api_key: "1ba4c6e3bfbdc9a88332bef8755e3c8446b36c1b"
+  skip_cleanup: true
+  draft: true
+  on:
+    tags: true
