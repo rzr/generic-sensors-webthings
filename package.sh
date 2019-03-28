@@ -1,7 +1,5 @@
 #!/bin/bash -e
 # SPDX-License-Identifier: MPL-2.0
-yarn --version > /dev/null 2>&1 \
-|| { echo "error: yarn not found (try: npm install -g yarn)" ; exit 1; }
 
 date=$(git log -1 --date=short --pretty=format:%cd || date -u)
 
@@ -14,10 +12,10 @@ else
 fi
 if [ "${ADDON_ARCH}" == "linux-arm" ]; then
   # We assume that CC and CXX are pointing to the cross compilers
-  yarn --ignore-scripts --production
+  npm install --only=prod
   npm rebuild --arch=armv6l --target_arch=arm
 else
-  yarn install --production
+  npm install --only=prod
 fi
 
 rm -f SHA256SUMS
