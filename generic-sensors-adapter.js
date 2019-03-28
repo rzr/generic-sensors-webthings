@@ -146,6 +146,7 @@ class GenericSensorsProperty extends Property {
 
 class GenericSensorsDevice extends Device {
   constructor(adapter, id, config) {
+    id = `generic-sensors-${id}`;
     super(adapter, id);
 
     this.type = config.type;
