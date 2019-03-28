@@ -16,7 +16,7 @@ ENV LC_ALL en_US.UTF-8
 ENV LANG ${LC_ALL}
 
 
-ENV project mozilla-generic-sensors-adapter
+ENV project mozilla-iot-generic-sensors-adapter
 
 ADD . /root/.mozilla-iot/addons/generic-sensors-adapter
 WORKDIR /root/.mozilla-iot/addons/${project}
@@ -34,7 +34,6 @@ RUN echo "#log: ${project}: Building sources" \
 WORKDIR /root/.mozilla-iot/addons/generic-sensors-adapter
 RUN echo "#log: ${project}: Installing sources" \
   && set -x \
-  && install -d /usr/local/src/${project}/ \
-  && install generic-sensors-adapter-*.tgz /usr/local/src/${project}/ \
+  && install -d /usr/local/src/${project}/dist \
+  && install generic-sensors-adapter-*.tgz /usr/local/src/${project}/dist \
   && sync
-
