@@ -25,6 +25,12 @@ Check following wiki page for more details:
 * https://github.com/rzr/webthing-iotjs/wiki/Addons
 
 
+Default things are using hardware sensors, but simulators can be added explicitly from the UI:
+From configure page add device, select sensorType among (ambientlight, temperature or color)
+and type as multiLevelSensor (or customSensor eg: ColorSensor) then properties should be added,
+First is "on" as boolean, next is "level" as number or "color" as string.
+
+
 ## DEMO: ##
 
 [![mozilla-iot-gateway-sensors-20180406rzr.webm](https://i.vimeocdn.com/video/693119286.jpg)](https://player.vimeo.com/video/263556462#mozilla-iot-gateway-sensors-20180406rzr "Video Demo")
