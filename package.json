@@ -49,7 +49,77 @@
     "plugin": true,
     "exec": "{nodeLoader} {path}",
     "config": {
-      "generic-sensors": []
+      "generic-sensors": [
+        {
+          "type": "multiLevelSensor",
+          "sensorType": "ambientLightSensor",
+          "sensorController": "bh1750",
+          "name": "Ambient Light Sensor",
+          "properties": [
+            {
+              "name": "level",
+              "metadata": {
+                "readOnly": true,
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "name": "on",
+              "metadata": {
+                "type": "boolean",
+                "value": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "customSensor",
+          "sensorType": "colorSensor",
+          "sensorController": "tcs34725",
+          "name": "Color Sensor",
+          "properties": [
+            {
+              "name": "color",
+              "metadata": {
+                "readOnly": true,
+                "type": "string",
+                "value": "#000000"
+              }
+            },
+            {
+              "name": "on",
+              "metadata": {
+                "type": "boolean",
+                "value": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "multiLevelSensor",
+          "sensorType": "temperatureSensor",
+          "sensorController": "bmp085",
+          "name": "Temperature Sensor",
+          "properties": [
+            {
+              "name": "level",
+              "metadata": {
+                "readOnly": true,
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "name": "on",
+              "metadata": {
+                "type": "boolean",
+                "value": false
+              }
+            }
+          ]
+        }
+      ]
     },
     "schema": {
       "type": "object",
@@ -61,17 +131,14 @@
             "required": [
               "type",
               "sensorType",
-              "sensorController",
-              "name",
-              "properties"
+              "name"
             ],
             "properties": {
               "type": {
                 "type": "string",
                 "enum": [
-                  "colorSensor",
                   "multiLevelSensor",
-                  "temperatureSensor"
+                  "customSensor"
                 ]
               },
               "sensorType": {
