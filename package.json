@@ -2,7 +2,7 @@
   "name": "generic-sensors-adapter",
   "display_name": "Generic Sensors",
   "version": "0.0.8",
-  "description": "Generic Sensors for Mozilla IoT Gateway",
+  "description": "Generic I2C Sensors for Mozilla WebThings Gateway",
   "author": "Philippe Coval",
   "main": "index.js",
   "scripts": {
