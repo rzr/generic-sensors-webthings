@@ -172,15 +172,12 @@ class GenericSensorsDevice extends Device {
 
     this.sensors = {};
     if (config.sensorType === 'temperatureSensor') {
-      this.sensorController = config.sensorController || 'bmp085';
       this.sensors.temperature =
         new GenericSensors.Temperature({controller: this.sensorController});
     } else if (config.sensorType === 'ambientLightSensor') {
-      this.sensorController = config.sensorController || 'bh1750';
       this.sensors.ambientLight =
         new GenericSensors.AmbientLight({controller: this.sensorController});
     } else if (config.sensorType === 'colorSensor') {
-      this.sensorController = config.sensorController || 'tcs34725';
       this.sensors.color =
         new GenericSensors.Color({controller: this.sensorController});
     }
