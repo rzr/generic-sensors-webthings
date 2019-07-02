@@ -83,6 +83,12 @@ const GENERICSENSORS_THINGS = [
   temperatureSensor,
 ];
 
+const GENERICSENSORS_THINGS_PROTOTYPES = {
+  ambientLightSensor: ambientLightSensor,
+  colorSensor: colorSensor,
+  temperatureSensor: temperatureSensor,
+};
+
 
 class GenericSensorsProperty extends Property {
   constructor(device, name, propertyDescr) {
@@ -169,7 +175,8 @@ class GenericSensorsDevice extends Device {
         new GenericSensors.Color({controller: this.sensorController});
     }
 
-    for (const prop of config.properties) {
+    for (const prop
+      of GENERICSENSORS_THINGS_PROTOTYPES[this.sensorType].properties) {
       this.properties.set(
         prop.name,
         new GenericSensorsProperty(this, prop.name, prop));
