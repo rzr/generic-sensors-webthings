@@ -55,70 +55,19 @@
           "type": "multiLevelSensor",
           "sensorType": "ambientLightSensor",
           "sensorController": "bh1750",
-          "name": "Ambient Light Sensor",
-          "properties": [
-            {
-              "name": "level",
-              "metadata": {
-                "readOnly": true,
-                "type": "number",
-                "value": 0
-              }
-            },
-            {
-              "name": "on",
-              "metadata": {
-                "type": "boolean",
-                "value": false
-              }
-            }
-          ]
+          "name": "Ambient Light Sensor"
         },
         {
           "type": "customSensor",
           "sensorType": "colorSensor",
           "sensorController": "tcs34725",
-          "name": "Color Sensor",
-          "properties": [
-            {
-              "name": "color",
-              "metadata": {
-                "readOnly": true,
-                "type": "string",
-                "value": "#000000"
-              }
-            },
-            {
-              "name": "on",
-              "metadata": {
-                "type": "boolean",
-                "value": false
-              }
-            }
-          ]
+          "name": "Color Sensor"
         },
         {
           "type": "multiLevelSensor",
           "sensorType": "temperatureSensor",
           "sensorController": "bmp085",
-          "name": "Temperature Sensor",
-          "properties": [
-            {
-              "name": "level",
-              "metadata": {
-                "readOnly": true,
-                "type": "number",
-                "value": 0
-              }
-            },
-            {
-              "name": "on",
-              "metadata": {
-                "type": "boolean",
-                "value": false
-              }
-            }
-          ]
+          "name": "Temperature Sensor"
         }
       ]
     },
@@ -155,44 +104,6 @@
               },
               "name": {
                 "type": "string"
-              },
-              "properties": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "required": [
-                    "name",
-                    "metadata"
-                  ],
-                  "properties": {
-                    "name": {
-                      "type": "string"
-                    },
-                    "metadata": {
-                      "type": "object",
-                      "required": [
-                        "type"
-                      ],
-                      "properties": {
-                        "type": {
-                          "type": "string"
-                        },
-                        "unit": {
-                          "type": "string"
-                        },
-                        "description": {
-                          "type": "string"
-                        },
-                        "minimum": {
-                          "type": "integer"
-                        },
-                        "maximum": {
-                          "type": "integer"
-                        }
-                      }
-                    }
-                  }
-                }
               }
             }
           }
