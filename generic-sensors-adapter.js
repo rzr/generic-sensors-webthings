@@ -20,39 +20,49 @@ const {
   Property,
 } = require('gateway-addon');
 
-function on() {
+function on(readOnly = false) {
   return {
     name: 'on',
     type: 'boolean',
     value: false,
+    metadata: {
+      label: 'On/Off',
+      '@type': 'OnOffProperty',
+      readOnly: readOnly,
+    },
   };
 }
 
-function level() {
+function level(readOnly = true) {
   return {
     name: 'level',
-    readOnly: 'true',
     type: 'number',
     value: 0,
+    metadata: {
+      label: 'Level',
+      readOnly: readOnly,
+    },
   };
 }
 
-function color() {
+function color(readOnly = true) {
   return {
     name: 'color',
-    readOnly: 'true',
     type: 'string',
     value: '#000000',
+    metadata: {
+      label: 'Color',
+      readOnly: readOnly,
+    },
   };
 }
-
 
 const ambientLightSensor = {
   type: 'multiLevelSensor',
   sensorType: 'ambientLightSensor',
   name: 'Ambient Light Sensor',
   properties: [
-    level(),
+    level(true),
     on(),
   ],
 };
@@ -62,7 +72,7 @@ const colorSensor = {
   sensorType: 'colorSensor',
   name: 'Color Sensor',
   properties: [
-    color(),
+    color(true),
     on(),
   ],
 };
@@ -72,7 +82,7 @@ const temperatureSensor = {
   sensorType: 'temperatureSensor',
   name: 'Temperature Sensor',
   properties: [
-    level(),
+    level(true),
     on(),
   ],
 };
