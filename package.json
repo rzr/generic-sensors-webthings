@@ -6,6 +6,7 @@
   "author": "Philippe Coval",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint --fix . || eslint .",
     "test": "eslint ."
   },
   "keywords": [
