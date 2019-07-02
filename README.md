@@ -1,8 +1,8 @@
 # MOZILLA IOT GENERIC SENSORS ADAPTER #
 
-[![GitHub forks](https://img.shields.io/github/forks/rzr/mozilla-iot-gateway-sensors-adapter.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/rzr/mozilla-iot-gateway-sensors-adapter/network/)
+[![GitHub forks](https://img.shields.io/github/forks/rzr/mozilla-iot-generic-sensors-adapter.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/rzr/mozilla-iot-generic-sensors-adapter/network/)
 [![license](https://img.shields.io/badge/license-Apache-2.0.svg)](LICENSE)
-[![Build Status](https://api.travis-ci.org/rzr/mozilla-iot-gateway-sensors-adapter.svg?branch=master)](https://travis-ci.org/rzr/mozilla-iot-gateway-sensors-adapter)
+[![Build Status](https://api.travis-ci.org/rzr/mozilla-iot-generic-sensors-adapter.svg?branch=master)](https://travis-ci.org/rzr/mozilla-iot-gateway-sensors-adapter)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frzr%2Fmozilla-iot-generic-sensors-adapter.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Frzr%2Fmozilla-iot-generic-sensors-adapter?ref=badge_shield)
 
 
@@ -41,6 +41,7 @@ First is "on" as boolean, next is "level" as number or "color" as string.
 ## RESOURCES: ##
 
 * https://github.com/rzr/mozilla-iot-generic-sensors-adapter
+* https://hub.samsunginter.net/adding-sensors-to-the-web-of-things/
 * https://discourse.mozilla.org/t/creating-i2c-add-on/26696/4
 * https://www.npmjs.com/package/generic-sensors-lite
 * https://github.com/mozilla-iot/addon-list/pull/54
