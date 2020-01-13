@@ -8,7 +8,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/ .
 #}
 
-FROM resin/rpi-raspbian:stretch
+FROM resin/rpi-raspbian:buster
 MAINTAINER Philippe Coval (p.coval@samsung.com)
 
 RUN [ "cross-build-start" ]
