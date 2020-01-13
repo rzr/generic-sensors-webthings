@@ -1,0 +1,82 @@
+{
+  "author": "Philippe Coval",
+  "description": "Generic I2C Sensors for Mozilla WebThings Gateway",
+  "gateway_specific_settings": {
+    "webthings": {
+      "exec": "{nodeLoader} {path}",
+      "primary_type": "adapter",
+      "strict_max_version": "*",
+      "strict_min_version": "0.10.0"
+    }
+  },
+  "homepage_url": "https://github.com/rzr/mozilla-iot-generic-sensors-adapter",
+  "id": "generic-sensors-adapter",
+  "license": "MPL-2.0",
+  "manifest_version": 1,
+  "name": "Generic Sensors",
+  "options": {
+    "default": {
+      "generic-sensors": [
+        {
+          "name": "Ambient Light Sensor",
+          "sensorController": "bh1750",
+          "sensorType": "ambientLightSensor",
+          "type": "multiLevelSensor"
+        },
+        {
+          "name": "Color Sensor",
+          "sensorController": "tcs34725",
+          "sensorType": "colorSensor",
+          "type": "customSensor"
+        },
+        {
+          "name": "Temperature Sensor",
+          "sensorController": "bmp085",
+          "sensorType": "temperatureSensor",
+          "type": "multiLevelSensor"
+        }
+      ]
+    },
+    "schema": {
+      "properties": {
+        "generic-sensors": {
+          "items": {
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "sensorController": {
+                "type": "string"
+              },
+              "sensorType": {
+                "enum": [
+                  "ambientLightSensor",
+                  "colorSensor",
+                  "temperatureSensor"
+                ],
+                "type": "string"
+              },
+              "type": {
+                "enum": [
+                  "multiLevelSensor",
+                  "customSensor"
+                ],
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "sensorType",
+              "name"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "short_name": "Generic Sens",
+  "version": "0.0.10"
+}
