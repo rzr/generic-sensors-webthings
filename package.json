@@ -30,6 +30,7 @@
     "SHA256SUMS",
     "generic-sensors-adapter.js",
     "index.js",
+    "manifest.json",
     "node_modules"
   ],
   "dependencies": {
