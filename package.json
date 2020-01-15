@@ -43,6 +43,7 @@
   "bundledDependencies": [
     "generic-sensors-lite"
   ],
+  "os": [ "!darwin", "!win32" ],
   "moziot": {
     "api": {
       "min": 2,
