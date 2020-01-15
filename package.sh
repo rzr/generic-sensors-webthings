@@ -19,7 +19,7 @@ else
 fi
 
 rm -f SHA256SUMS
-sha256sum package.json *.js LICENSE manifest.json > SHA256SUMS
+sha256sum package.json *.js LICENSE manifest.json README.md > SHA256SUMS
 find node_modules -type f -exec sha256sum {} \; >> SHA256SUMS
 TARFILE="$(npm pack)"
 tar xzf ${TARFILE}
