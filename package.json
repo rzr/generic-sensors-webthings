@@ -70,6 +70,12 @@
         },
         {
           "type": "multiLevelSensor",
+          "sensorType": "humiditySensor",
+          "sensorController": "htu21d",
+          "name": "Humidity Sensor"
+        },
+        {
+          "type": "multiLevelSensor",
           "sensorType": "temperatureSensor",
           "sensorController": "bmp085",
           "name": "Temperature Sensor"
@@ -101,6 +107,7 @@
                 "enum": [
                   "ambientLightSensor",
                   "colorSensor",
+                  "humiditySensor",
                   "temperatureSensor"
                 ]
               },

@@ -77,6 +77,17 @@ const colorSensor = {
   ],
 };
 
+const humiditySensor = {
+  type: 'multiLevelSensor',
+  sensorType: 'humiditySensor',
+  name: 'Humidity Sensor',
+  properties: [
+    level(true),
+    on(),
+  ],
+};
+
+
 const temperatureSensor = {
   type: 'multiLevelSensor',
   sensorType: 'temperatureSensor',
@@ -90,12 +101,14 @@ const temperatureSensor = {
 const GENERICSENSORS_THINGS = [
   ambientLightSensor,
   colorSensor,
+  humiditySensor,
   temperatureSensor,
 ];
 
 const GENERICSENSORS_THINGS_PROTOTYPES = {
   ambientLightSensor: ambientLightSensor,
   colorSensor: colorSensor,
+  humiditySensor: humiditySensor,
   temperatureSensor: temperatureSensor,
 };
 
@@ -124,6 +137,8 @@ class GenericSensorsProperty extends Property {
       sensor = this.device.sensors.ambientLight;
     } else if (this.device.sensorType === 'colorSensor') {
       sensor = this.device.sensors.color;
+    } else if (this.device.sensorType === 'humiditySensor') {
+      sensor = this.device.sensors.humidity;
     }
     return sensor;
   }
@@ -154,6 +169,8 @@ class GenericSensorsProperty extends Property {
         this.setCachedValue(this.device.sensors.ambientLight.illuminance);
       } else if (this.device.sensorType == 'colorSensor') {
         this.setCachedValue(this.device.sensors.color.color);
+      } else if (this.device.sensorType == 'humiditySensor') {
+        this.setCachedValue(this.device.sensors.humidity.level);
       }
     }
     this.device.notifyPropertyChanged(this);
@@ -180,6 +197,9 @@ class GenericSensorsDevice extends Device {
     } else if (config.sensorType === 'colorSensor') {
       this.sensors.color =
         new GenericSensors.Color({controller: this.sensorController});
+    } else if (config.sensorType === 'humiditySensor') {
+      this.sensors.humidity =
+        new GenericSensors.Humidity({controller: this.sensorController});
     }
 
     for (const prop
