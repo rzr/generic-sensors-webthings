@@ -34,7 +34,7 @@
     "node_modules"
   ],
   "dependencies": {
-    "generic-sensors-lite": "0.0.14"
+    "generic-sensors-lite": "0.0.15"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
