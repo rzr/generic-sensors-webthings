@@ -9,7 +9,7 @@
 #}
 
 FROM resin/rpi-raspbian:buster
-MAINTAINER Philippe Coval (p.coval@samsung.com)
+MAINTAINER Philippe Coval (rzr@users.sf.net)
 
 RUN [ "cross-build-start" ]
 

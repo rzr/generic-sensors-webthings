@@ -11,7 +11,7 @@
 FROM arm64v8/node:carbon
 ADD extra/docker/architecture/linux-arm64/local/qemu-aarch64-static /usr/bin/qemu-aarch64-static 
 
-MAINTAINER Philippe Coval (p.coval@samsung.com)
+MAINTAINER Philippe Coval (rzr@users.sf.net)
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LC_ALL en_US.UTF-8

@@ -8,8 +8,8 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/ .
 #}
 
-FROM mozillaiot/gateway:latest
-MAINTAINER Philippe Coval (p.coval@samsung.com)
+FROM mozillaiot/gateway:latest 
+MAINTAINER Philippe Coval (rzr@users.sf.net)
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LC_ALL en_US.UTF-8
