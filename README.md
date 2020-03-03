@@ -40,17 +40,17 @@ First is "on" as boolean, next is "level" as number or "color" as string.
 
 ## RESOURCES: ##
 
-* https://github.com/rzr/mozilla-iot-generic-sensors-adapter
-* https://hub.samsunginter.net/adding-sensors-to-the-web-of-things/
-* https://discourse.mozilla.org/t/creating-i2c-add-on/26696/4
-* https://www.npmjs.com/package/generic-sensors-lite
-* https://github.com/mozilla-iot/addon-list/pull/54
-* https://iot.mozilla.org/
-* https://iot.mozilla.org/wot/
-* https://www.npmjs.com/~rzr
-* https://s-opensource.org/author/philcovalsamsungcom/
-* irc://irc.mozilla.org/#iot
-* https://github.com/mozilla-iot/gateway/issues/1567
+* <https://github.com/rzr/mozilla-iot-generic-sensors-adapter>
+* <https://hub.samsunginter.net/adding-sensors-to-the-web-of-things/>
+* <https://discourse.mozilla.org/t/creating-i2c-add-on/26696/4>
+* <https://www.npmjs.com/package/generic-sensors-lite>
+* <https://github.com/mozilla-iot/addon-list/pull/54>
+* <https://iot.mozilla.org/>
+* <https://iot.mozilla.org/wot/>
+* <https://www.npmjs.com/~rzr>
+* <https://s-opensource.org/author/philcovalsamsungcom/>
+* <irc://irc.mozilla.org/#iot>
+* <https://github.com/mozilla-iot/gateway/issues/1567>
 
 
 ## LICENSE: Apache-2.0 ##
