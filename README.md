@@ -8,7 +8,7 @@
 
 ## INTRODUCTION: ##
 
-Addons for Mozilla IoT gateway, built on "generic-sensor-lite" module to abstract I2C driver
+Addon for Mozilla IoT gateway, built on "generic-sensor-lite" module to abstract I2C driver
 by a stable API (W3C generic sensors).
 
 [![webthing-iotjs-tizenrt-cdl2018-20181117rzr](https://image.slidesharecdn.com/webthing-iotjs-tizenrt-cdl2018-20181117rzr-181118110813/95/webthingiotjstizenrtcdl201820181117rzr-23-638.jpg)](https://slideshare.net/slideshow/embed_code/key/GWBOzbFaez5hcJ#webthing-iotjs-tizenrt-cdl2018-20181117rzr "webthing-iotjs-tizenrt-cdl2018-20181117rzr")
@@ -34,6 +34,12 @@ First is "on" as boolean, next is "level" as number or "color" as string.
 ## DEMO: ##
 
 [![mozilla-iot-gateway-sensors-20180406rzr.webm](https://i.vimeocdn.com/video/693119286.jpg)](https://player.vimeo.com/video/263556462#mozilla-iot-gateway-sensors-20180406rzr "Video Demo")
+
+[![htu21d](
+https://pbs.twimg.com/media/EOkS9pHW4AEnr9w?format=jpg#./file/htu21d.jpg
+)](
+https://twitter.com/RzrFreeFr/status/1218534773192364033#
+"htu21d")
 
 [![mozilla-iot-gateway-sensors-20180406rzr.png](https://i1.wp.com/s-opensource.org/wp-content/uploads/2018/04/mozilla-iot-gateway-sensors-20180406rzr.png)](https://www.slideshare.net/rzrfreefr/webthingiotjs20181022rzr-120959360/12# "Rules")
 
