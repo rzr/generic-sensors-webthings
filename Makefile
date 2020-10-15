@@ -11,7 +11,7 @@
 
 default: help all
 
-project ?= mozilla-iot-generic-sensors-adapter
+project ?= generic-sensors-webthing
 
 lint: node_modules
 	npm run $@

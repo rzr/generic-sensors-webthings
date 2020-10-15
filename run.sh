@@ -11,7 +11,7 @@ set -x
 
 env_()
 {
-    project="mozilla-generic-sensors-adapter"
+    project="generic-sensors-webthing"
     org="rzr"
     branch="master"
     url_suffix="#{branch}"
