@@ -1,14 +1,14 @@
-# MOZILLA IOT GENERIC SENSORS ADAPTER #
+# WEBTHINGS GATEWAY GENERIC SENSORS ADAPTER #
 
-[![GitHub forks](https://img.shields.io/github/forks/rzr/mozilla-iot-generic-sensors-adapter.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/rzr/mozilla-iot-generic-sensors-adapter/network/)
+[![GitHub forks](https://img.shields.io/github/forks/rzr/generic-sensors-webthing.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/rzr/generic-sensors-webthing/network/)
 [![license](https://img.shields.io/badge/license-Apache-2.0.svg)](LICENSE)
-[![Build Status](https://api.travis-ci.org/rzr/mozilla-iot-generic-sensors-adapter.svg?branch=master)](https://travis-ci.org/rzr/mozilla-iot-gateway-sensors-adapter)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frzr%2Fmozilla-iot-generic-sensors-adapter.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Frzr%2Fmozilla-iot-generic-sensors-adapter?ref=badge_shield)
+[![Build Status](https://api.travis-ci.org/rzr/generic-sensors-webthing.svg?branch=master)](https://travis-ci.org/rzr/generic-sensors-webthing)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frzr%2Fgeneric-sensors-webthing.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Frzr%2Fgeneric-sensors-webthing?ref=badge_shield)
 
 
 ## INTRODUCTION: ##
 
-Addon for Mozilla IoT gateway, built on "generic-sensor-lite" module to abstract I2C driver
+Addon for WebThings Gateway, built on "generic-sensor-lite" module to abstract I2C driver
 by a stable API (W3C generic sensors).
 
 [![webthing-iotjs-tizenrt-cdl2018-20181117rzr](https://image.slidesharecdn.com/webthing-iotjs-tizenrt-cdl2018-20181117rzr-181118110813/95/webthingiotjstizenrtcdl201820181117rzr-23-638.jpg)](https://slideshare.net/slideshow/embed_code/key/GWBOzbFaez5hcJ#webthing-iotjs-tizenrt-cdl2018-20181117rzr "webthing-iotjs-tizenrt-cdl2018-20181117rzr")
@@ -16,7 +16,7 @@ by a stable API (W3C generic sensors).
 
 ## USAGE: ##
 
-* Install mozilla-iot gateway (0.4.0+) on supported system
+* Install WebThings Gateway (0.4.0+) on supported system
 * Enable I2C if not present (Enable ssh, log in, run raspi-config)
 * It was tested on Raspberry PI 3 along 2 I2C sensors supported by "generic-sensors-lite" module
 
@@ -46,19 +46,18 @@ https://twitter.com/RzrFreeFr/status/1218534773192364033#
 
 ## RESOURCES: ##
 
-* <https://github.com/rzr/mozilla-iot-generic-sensors-adapter>
+* <https://github.com/rzr/generic-sensors-webthing>
 * <https://hub.samsunginter.net/adding-sensors-to-the-web-of-things/>
 * <https://discourse.mozilla.org/t/creating-i2c-add-on/26696/4>
 * <https://www.npmjs.com/package/generic-sensors-lite>
-* <https://github.com/mozilla-iot/addon-list/pull/54>
+* <https://github.com/WebThingsIO/addon-list/pull/54>
 * <https://iot.mozilla.org/>
 * <https://iot.mozilla.org/wot/>
 * <https://www.npmjs.com/~rzr>
 * <https://s-opensource.org/author/philcovalsamsungcom/>
-* <irc://irc.mozilla.org/#iot>
-* <https://github.com/mozilla-iot/gateway/issues/1567>
+* <https://github.com/WebThingsIO/gateway/issues/1567>
 
 
 ## LICENSE: Apache-2.0 ##
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frzr%2Fmozilla-iot-generic-sensors-adapter.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Frzr%2Fmozilla-iot-generic-sensors-adapter?ref=badge_large)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frzr%2Fgeneric-sensors-webthing.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Frzr%2Fgeneric-sensors-webthing?ref=badge_large)

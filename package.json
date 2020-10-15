@@ -2,7 +2,7 @@
   "name": "generic-sensors-adapter",
   "display_name": "Generic Sensors",
   "version": "0.0.13",
-  "description": "Generic I2C Sensors for Mozilla WebThings Gateway",
+  "description": "Generic I2C Sensors for WebThings Gateway",
   "author": "Philippe Coval",
   "main": "index.js",
   "scripts": {
@@ -10,20 +10,18 @@
     "test": "eslint ."
   },
   "keywords": [
-    "mozilla",
-    "iot",
     "adapter",
     "i2c",
     "sensors"
   ],
   "license": "MPL-2.0",
-  "homepage": "https://github.com/rzr/mozilla-iot-generic-sensors-adapter",
+  "homepage": "https://github.com/rzr/generic-sensors-webthing",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rzr/mozilla-iot-generic-sensors-adapter.git"
+    "url": "https://github.com/rzr/generic-sensors-webthing.git"
   },
   "bugs": {
-    "url": "https://github.com/rzr/mozilla-iot-generic-sensors-adapter/issues"
+    "url": "https://github.com/rzr/generic-sensors-webthing/issues"
   },
   "files": [
     "LICENSE",

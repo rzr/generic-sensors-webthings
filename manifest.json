@@ -1,6 +1,6 @@
 {
   "author": "Philippe Coval",
-  "description": "Generic I2C Sensors for Mozilla WebThings Gateway",
+  "description": "Generic I2C Sensors for WebThings Gateway",
   "gateway_specific_settings": {
     "webthings": {
       "exec": "{nodeLoader} {path}",
@@ -9,7 +9,7 @@
       "strict_min_version": "0.10.0"
     }
   },
-  "homepage_url": "https://github.com/rzr/mozilla-iot-generic-sensors-adapter",
+  "homepage_url": "https://github.com/rzr/generic-sensors-webthing",
   "id": "generic-sensors-adapter",
   "license": "MPL-2.0",
   "manifest_version": 1,
