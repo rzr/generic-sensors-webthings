@@ -1,9 +1,9 @@
 # WEBTHINGS GATEWAY GENERIC SENSORS ADAPTER #
 
-[![GitHub forks](https://img.shields.io/github/forks/rzr/generic-sensors-webthing.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/rzr/generic-sensors-webthing/network/)
+[![GitHub forks](https://img.shields.io/github/forks/rzr/generic-sensors-webthings.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/rzr/generic-sensors-webthings/network/)
 [![license](https://img.shields.io/badge/license-Apache-2.0.svg)](LICENSE)
-[![Build Status](https://api.travis-ci.org/rzr/generic-sensors-webthing.svg?branch=master)](https://travis-ci.org/rzr/generic-sensors-webthing)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frzr%2Fgeneric-sensors-webthing.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Frzr%2Fgeneric-sensors-webthing?ref=badge_shield)
+[![Build Status](https://api.travis-ci.org/rzr/generic-sensors-webthings.svg?branch=master)](https://travis-ci.org/rzr/generic-sensors-webthings)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frzr%2Fgeneric-sensors-webthings.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Frzr%2Fgeneric-sensors-webthings?ref=badge_shield)
 
 
 ## INTRODUCTION: ##
@@ -41,12 +41,13 @@ https://pbs.twimg.com/media/EOkS9pHW4AEnr9w?format=jpg#./file/htu21d.jpg
 https://twitter.com/RzrFreeFr/status/1218534773192364033#
 "htu21d")
 
-[![mozilla-iot-gateway-sensors-20180406rzr.png](https://i1.wp.com/s-opensource.org/wp-content/uploads/2018/04/mozilla-iot-gateway-sensors-20180406rzr.png)](https://www.slideshare.net/rzrfreefr/webthingiotjs20181022rzr-120959360/12# "Rules")
+[![mozilla-iot-gateway-sensors-20180406rzr.png](https://files.mastodon.social/media_attachments/files/105/040/961/456/935/239/original/69b54ee2c780f23d.png)](https://www.slideshare.net/rzrfreefr/webthingiotjs20181022rzr-120959360/12# "Rules")
 
 
 ## RESOURCES: ##
 
-* <https://github.com/rzr/generic-sensors-webthing>
+* <https://purl.org/rzr/sensors>
+* <https://github.com/rzr/generic-sensors-webthings>
 * <https://hub.samsunginter.net/adding-sensors-to-the-web-of-things/>
 * <https://discourse.mozilla.org/t/creating-i2c-add-on/26696/4>
 * <https://www.npmjs.com/package/generic-sensors-lite>

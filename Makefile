@@ -11,7 +11,7 @@
 
 default: help all
 
-project ?= generic-sensors-webthing
+project ?= generic-sensors-webthings
 
 lint: node_modules
 	npm run $@

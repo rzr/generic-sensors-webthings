@@ -15,13 +15,13 @@
     "sensors"
   ],
   "license": "MPL-2.0",
-  "homepage": "https://github.com/rzr/generic-sensors-webthing",
+  "homepage": "https://github.com/rzr/generic-sensors-webthings",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rzr/generic-sensors-webthing.git"
+    "url": "https://github.com/rzr/generic-sensors-webthings.git"
   },
   "bugs": {
-    "url": "https://github.com/rzr/generic-sensors-webthing/issues"
+    "url": "https://github.com/rzr/generic-sensors-webthings/issues"
   },
   "files": [
     "LICENSE",

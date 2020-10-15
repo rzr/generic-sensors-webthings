@@ -11,7 +11,7 @@ set -x
 
 env_()
 {
-    project="generic-sensors-webthing"
+    project="generic-sensors-webthings"
     org="rzr"
     branch="master"
     url_suffix="#{branch}"

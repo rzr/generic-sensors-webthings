@@ -9,7 +9,7 @@
       "strict_min_version": "0.10.0"
     }
   },
-  "homepage_url": "https://github.com/rzr/generic-sensors-webthing",
+  "homepage_url": "https://github.com/rzr/generic-sensors-webthings",
   "id": "generic-sensors-adapter",
   "license": "MPL-2.0",
   "manifest_version": 1,
