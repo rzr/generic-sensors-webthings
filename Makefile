@@ -19,16 +19,19 @@ lint: node_modules
 help:
 	@echo "## Usage: "
 	@echo "# make lint"
+	@echo "# make rule/version"
+	@echo "# make rule/version/X.Y.Z"
 
 node_modules: package.json
 	npm install
 
-setup/node: node_modules
-	@echo "NODE_PATH=$${NODE_PATH}"
+rule/version: node_modules
+	@echo "# NODE_PATH=$${NODE_PATH}"
 	node --version
 	npm --version
+	npm version
 
-version/%: manifest.json
+rule/version/%: manifest.json
 	-npm version
 	-git describe --tags
 	sed -e "s|\(\"version\":\) .*|\1 \"${@F}\"|g" -i $<
