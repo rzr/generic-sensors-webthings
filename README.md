@@ -2,6 +2,7 @@
 
 [![GitHub forks](https://img.shields.io/github/forks/rzr/generic-sensors-webthings.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/rzr/generic-sensors-webthings/network/)
 [![license](https://img.shields.io/badge/license-Apache-2.0.svg)](LICENSE)
+![Release](https://github.com/rzr/generic-sensors-webthings/workflows/Release/badge.svg)
 [![Build Status](https://api.travis-ci.org/rzr/generic-sensors-webthings.svg?branch=master)](https://travis-ci.org/rzr/generic-sensors-webthings)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frzr%2Fgeneric-sensors-webthings.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Frzr%2Fgeneric-sensors-webthings?ref=badge_shield)
 
