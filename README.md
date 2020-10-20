@@ -2,7 +2,7 @@
 
 [![GitHub forks](https://img.shields.io/github/forks/rzr/generic-sensors-webthings.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/rzr/generic-sensors-webthings/network/)
 [![license](https://img.shields.io/badge/license-Apache-2.0.svg)](LICENSE)
-![Release](https://github.com/rzr/generic-sensors-webthings/workflows/Release/badge.svg)
+[![Release](https://github.com/rzr/generic-sensors-webthings/workflows/Release/badge.svg)
 [![Build Status](https://api.travis-ci.org/rzr/generic-sensors-webthings.svg?branch=master)](https://travis-ci.org/rzr/generic-sensors-webthings)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frzr%2Fgeneric-sensors-webthings.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Frzr%2Fgeneric-sensors-webthings?ref=badge_shield)
 
@@ -47,7 +47,9 @@ https://twitter.com/RzrFreeFr/status/1218534773192364033#
 
 ## RESOURCES: ##
 
+* <https://purl.org/rzr>
 * <https://purl.org/rzr/sensors>
+* <http://rzr.github.io/rzr-presentations/docs/sensors-webthings>
 * <https://github.com/rzr/generic-sensors-webthings>
 * <https://hub.samsunginter.net/adding-sensors-to-the-web-of-things/>
 * <https://discourse.mozilla.org/t/creating-i2c-add-on/26696/4>
