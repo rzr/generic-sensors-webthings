@@ -2,10 +2,18 @@
 
 [![GitHub forks](https://img.shields.io/github/forks/rzr/generic-sensors-webthings.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/rzr/generic-sensors-webthings/network/)
 [![license](https://img.shields.io/badge/license-Apache-2.0.svg)](LICENSE)
-[![Release](https://github.com/rzr/generic-sensors-webthings/workflows/Release/badge.svg)
+[![Release](
+https://github.com/rzr/generic-sensors-webthings/workflows/Release/badge.svg
+)(
+https://github.com/rzr/generic-sensors-webthings/actions?query=workflow%3ARelease
+)
 [![Build Status](https://api.travis-ci.org/rzr/generic-sensors-webthings.svg?branch=master)](https://travis-ci.org/rzr/generic-sensors-webthings)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frzr%2Fgeneric-sensors-webthings.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Frzr%2Fgeneric-sensors-webthings?ref=badge_shield)
-
+[![Fediverse](
+https://img.shields.io/mastodon/follow/279303?domain=https%3A%2F%2Fmastodon.social&style=social
+)](
+https://mastodon.social/@rzr/104138640136323272#https://purl.org/rzr/sensors
+)
 
 ## INTRODUCTION: ##
 
@@ -17,13 +25,13 @@ by a stable API (W3C generic sensors).
 
 ## USAGE: ##
 
-* Install WebThings Gateway (0.4.0+) on supported system
-* Enable I2C if not present (Enable ssh, log in, run raspi-config)
-* It was tested on Raspberry PI 3 along 2 I2C sensors supported by "generic-sensors-lite" module
+-   Install WebThings Gateway (0.4.0+) on supported system
+-   Enable I2C if not present (Enable ssh, log in, run raspi-config)
+-   It was tested on Raspberry PI 3 along 2 I2C sensors supported by "generic-sensors-lite" module
 
 Check following wiki page for more details:
 
-* https://github.com/rzr/webthing-iotjs/wiki/Addons
+-   https://github.com/rzr/webthing-iotjs/wiki/Addons
 
 
 Default things are using hardware sensors, but simulators can be added explicitly from the UI:
@@ -42,26 +50,31 @@ https://pbs.twimg.com/media/EOkS9pHW4AEnr9w?format=jpg#./file/htu21d.jpg
 https://twitter.com/RzrFreeFr/status/1218534773192364033#
 "htu21d")
 
-[![mozilla-iot-gateway-sensors-20180406rzr.png](https://files.mastodon.social/media_attachments/files/105/040/961/456/935/239/original/69b54ee2c780f23d.png)](https://www.slideshare.net/rzrfreefr/webthingiotjs20181022rzr-120959360/12# "Rules")
-
-
 ## RESOURCES: ##
 
-* <https://purl.org/rzr>
-* <https://purl.org/rzr/sensors>
-* <http://rzr.github.io/rzr-presentations/docs/sensors-webthings>
-* <https://github.com/rzr/generic-sensors-webthings>
-* <https://hub.samsunginter.net/adding-sensors-to-the-web-of-things/>
-* <https://discourse.mozilla.org/t/creating-i2c-add-on/26696/4>
-* <https://www.npmjs.com/package/generic-sensors-lite>
-* <https://github.com/WebThingsIO/addon-list/pull/54>
-* <https://iot.mozilla.org/>
-* <https://iot.mozilla.org/wot/>
-* <https://www.npmjs.com/~rzr>
-* <https://s-opensource.org/author/philcovalsamsungcom/>
-* <https://github.com/WebThingsIO/gateway/issues/1567>
+-   <https://purl.org/rzr>
+-   <https://purl.org/rzr/sensors>
+-   <http://rzr.github.io/rzr-presentations/docs/sensors-webthings>
+-   <https://github.com/rzr/generic-sensors-webthings>
+-   <https://hub.samsunginter.net/adding-sensors-to-the-web-of-things/>
+-   <https://discourse.mozilla.org/t/creating-i2c-add-on/26696/4>
+-   <https://www.npmjs.com/package/generic-sensors-lite>
+-   <https://github.com/WebThingsIO/addon-list/pull/54>
+-   <https://iot.mozilla.org/>
+-   <https://iot.mozilla.org/wot/>
+-   <https://www.npmjs.com/~rzr>
+-   <https://s-opensource.org/author/philcovalsamsungcom/>
+-   <https://github.com/WebThingsIO/gateway/issues/1567>
 
 
 ## LICENSE: Apache-2.0 ##
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frzr%2Fgeneric-sensors-webthing.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Frzr%2Fgeneric-sensors-webthing?ref=badge_large)
+
+[![mozilla-iot-gateway-sensors-20180406rzr.png](
+https://files.mastodon.social/media_attachments/files/105/040/961/456/935/239/original/69b54ee2c780f23d.png
+)](
+https://www.slideshare.net/rzrfreefr/webthingiotjs20181022rzr-120959360/12#
+"Rules"
+)
+
