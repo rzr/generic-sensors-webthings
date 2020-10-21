@@ -56,7 +56,7 @@ rule/addons/push: ${addons_json}
 	@echo "# About to push to ${addons_review_url}"
 	@echo "# Stop now with ctrl+c"
 	sleep 5
-	cd ${<D} \
+	cd ${addons_dir} \
 && git push ${addons_review_url} -f HEAD:${addons_review_branch}
 	@echo "# Request merge at"
 	@echo "# ${addons_review_http_url}"
